@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px; /* Offset for fixed navbar */
+}
+
+/* Focus visible for better accessibility */
+:focus-visible {
+  outline: 3px solid #DCAE96;
+  outline-offset: 2px;
+}

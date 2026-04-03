@@ -52,7 +52,7 @@
         }
       ],
       "priceRange": "GHS",
-      "servesCuisine": ["Pastry", "Ice Cream", "Desserts"],
+      "servesCuisine": ["Pastry", "Cake", "Ice Cream", "Desserts"],
       "description": "Artisan ice cream & pastries crafted by apprentices under Master Pastry Chefs. A dedicated training kitchen in Kasoa, Ghana."
     }
     </script>
@@ -88,6 +88,16 @@
         #cookieBanner { transition: transform 0.3s ease; }
         #cookieBanner.hidden { transform: translateY(100%); }
     </style>
+    <!-- In <head>, replace with your GA4 ID -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+</script>
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#DCAE96">
 </head>
 <body class="bg-cream font-body text-charcoal">
 
@@ -381,7 +391,7 @@
 
                 <div class="space-y-8">
                     <div class="h-64 bg-gray-200 rounded-2xl overflow-hidden shadow-md">
-                        <!-- Fixed map embed with Kasoa, Ghana coordinates [[1]][[13]] -->
+                        <!-- map embed with Kasoa, Ghana coordinates [[1]][[13]] -->
                         <iframe 
                             src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=5.53449,-0.41679&zoom=15" 
                             width="100%" 
@@ -459,6 +469,82 @@
         </div>
     </footer>
 
+    <form 
+  id="contactForm" 
+  action="https://formspree.io/f/mjgpenbz" 
+  method="POST" 
+  class="space-y-4"
+  novalidate
+>
+  <!-- Hidden field for subject -->
+  <input type="hidden" name="_subject" value="New inquiry from Hannah's Patisserie website">
+  
+  <!-- Honeypot spam protection -->
+  <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+  
+  <div>
+    <label for="name" class="block text-sm font-semibold mb-1">Name</label>
+    <input 
+      type="text" 
+      id="name" 
+      name="name" 
+      required 
+      class="w-full p-3 rounded-lg border border-rose/30 focus:outline-none focus:ring-2 focus:ring-rose" 
+      placeholder="Your Name"
+      aria-required="true"
+    >
+  </div>
+  
+  <div>
+    <label for="email" class="block text-sm font-semibold mb-1">Email</label>
+    <input 
+      type="email" 
+      id="email" 
+      name="email" 
+      required 
+      class="w-full p-3 rounded-lg border border-rose/30 focus:outline-none focus:ring-2 focus:ring-rose" 
+      placeholder="email@example.com"
+      aria-required="true"
+    >
+  </div>
+  
+  <div>
+    <label for="phone" class="block text-sm font-semibold mb-1">Phone (Optional)</label>
+    <input 
+      type="tel" 
+      id="phone" 
+      name="phone" 
+      class="w-full p-3 rounded-lg border border-rose/30 focus:outline-none focus:ring-2 focus:ring-rose" 
+      placeholder="+233 XX XXX XXXX"
+    >
+  </div>
+  
+  <div>
+    <label for="message" class="block text-sm font-semibold mb-1">Message</label>
+    <textarea 
+      id="message" 
+      name="message" 
+      rows="4" 
+      required
+      class="w-full p-3 rounded-lg border border-rose/30 focus:outline-none focus:ring-2 focus:ring-rose" 
+      placeholder="How can we help?"
+      aria-required="true"
+    ></textarea>
+  </div>
+  
+  <!-- Redirect after submission -->
+  <input type="hidden" name="_next" value="https://hannahspatisserie.com/thank-you.html">
+  
+  <button 
+    type="submit" 
+    class="w-full bg-roseDark text-white font-bold py-3 rounded-lg hover:bg-rose transition shadow-md focus:outline-none focus:ring-2 focus:ring-roseDark disabled:opacity-50"
+    id="submitBtn"
+  >
+    Send Message
+  </button>
+  
+  <p id="form-status" class="text-center text-sm mt-2" role="status" aria-live="polite"></p>
+</form>
     <script>
         // ===== Mobile Menu Toggle =====
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
@@ -586,4 +672,5 @@
         });
     </script>
 </body>
+<!-- v1.2.0 • Deployed: 2026-04-03 • Kasoa, Ghana -->
 </html>
