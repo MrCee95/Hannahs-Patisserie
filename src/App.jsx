@@ -1,5 +1,3 @@
-import { useEffect } from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { initGA, usePageViews } from './hooks/useAnalytics';
 import Layout from './components/layout/Layout';
 import Home from './pages/Home';
@@ -10,12 +8,10 @@ import ThankYou from './pages/ThankYou';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 function App() {
-  useEffect(() => {
-    initGA();
-  }, []);
   return (
-    <BrowserRouter basename="/Hannahs-Patisserie">  
-      <AnalyticsTracker />
+    // 🔑 basename must match base in vite.config.js (but NO trailing slash)
+    <BrowserRouter basename="/Hannahs-Patisserie">
+       <AnalyticsTracker />
       <Layout>
         <Routes>
           <Route path="/" element={<Home />} />
