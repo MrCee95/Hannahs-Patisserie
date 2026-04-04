@@ -1,66 +1,70 @@
 {
-  "hash": "f2afd32b",
-  "configHash": "a1f9b9fa",
-  "lockfileHash": "fe7eff43",
-  "browserHash": "50ad0e28",
+  "hash": "ee3848d4",
+  "configHash": "3b6255bd",
+  "lockfileHash": "92d2c877",
+  "browserHash": "a9a2dce4",
   "optimized": {
-    "framer-motion": {
-      "src": "../../node_modules/framer-motion/dist/es/index.mjs",
-      "file": "framer-motion.js",
-      "fileHash": "7ea99b75",
-      "needsInterop": false
+    "react": {
+      "src": "../../node_modules/react/index.js",
+      "file": "react.js",
+      "fileHash": "fe33daf1",
+      "needsInterop": true
     },
     "react-dom": {
       "src": "../../node_modules/react-dom/index.js",
       "file": "react-dom.js",
-      "fileHash": "eb793af1",
-      "needsInterop": true
-    },
-    "react-dom/client": {
-      "src": "../../node_modules/react-dom/client.js",
-      "file": "react-dom_client.js",
-      "fileHash": "4286a8d8",
-      "needsInterop": true
-    },
-    "react-ga4": {
-      "src": "../../node_modules/react-ga4/dist/index.js",
-      "file": "react-ga4.js",
-      "fileHash": "b2c2eaf6",
-      "needsInterop": true
-    },
-    "react-router-dom": {
-      "src": "../../node_modules/react-router-dom/dist/index.js",
-      "file": "react-router-dom.js",
-      "fileHash": "ba71618b",
-      "needsInterop": false
-    },
-    "react": {
-      "src": "../../node_modules/react/index.js",
-      "file": "react.js",
-      "fileHash": "fddce088",
+      "fileHash": "a92a0779",
       "needsInterop": true
     },
     "react/jsx-dev-runtime": {
       "src": "../../node_modules/react/jsx-dev-runtime.js",
       "file": "react_jsx-dev-runtime.js",
-      "fileHash": "54dd6b7c",
+      "fileHash": "d79dd3b1",
       "needsInterop": true
     },
     "react/jsx-runtime": {
       "src": "../../node_modules/react/jsx-runtime.js",
       "file": "react_jsx-runtime.js",
-      "fileHash": "75e14d12",
+      "fileHash": "baae6dc0",
       "needsInterop": true
+    },
+    "framer-motion": {
+      "src": "../../node_modules/framer-motion/dist/es/index.mjs",
+      "file": "framer-motion.js",
+      "fileHash": "c44b65d9",
+      "needsInterop": false
+    },
+    "react-dom/client": {
+      "src": "../../node_modules/react-dom/client.js",
+      "file": "react-dom_client.js",
+      "fileHash": "82d65a1d",
+      "needsInterop": true
+    },
+    "react-ga4": {
+      "src": "../../node_modules/react-ga4/dist/index.js",
+      "file": "react-ga4.js",
+      "fileHash": "959b44b3",
+      "needsInterop": true
+    },
+    "react-router-dom": {
+      "src": "../../node_modules/react-router-dom/dist/index.js",
+      "file": "react-router-dom.js",
+      "fileHash": "55a17b7a",
+      "needsInterop": false
     }
   },
   "chunks": {
-    "chunk-BoAXSpZd": {
-      "file": "chunk-BoAXSpZd.js",
-      "isDynamicEntry": false
+    "chunk-IHRST5LR": {
+      "file": "chunk-IHRST5LR.js"
     },
-    "react-dom-DoAJ_auL": {
-      "file": "react-dom-DoAJ_auL.js",
-      "isDynamicEntry": false
+    "chunk-LER6W43O": {
+      "file": "chunk-LER6W43O.js"
+    },
+    "chunk-32E4H3EV": {
+      "file": "chunk-32E4H3EV.js"
+    },
+    "chunk-G3PMV62Z": {
+      "file": "chunk-G3PMV62Z.js"
     }
   }
 }
