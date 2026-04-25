@@ -5,21 +5,21 @@ const graduates = [
     id: 1,
     name: 'Graduate 1',
     year: "Class of '24",
-    photo: '/images/Grad1.jpg', // ← Points to public/images/Grad1.jpg
+    photo: '/images/Grad_with_cake.jpg',
     testimonial: '"Hannah\'s gave me the confidence to open my own pop-up doughnut shop last summer!"',
   },
   {
     id: 2,
     name: 'Graduate 2',
     year: "Class of '25",
-    photo: '/images/Grad2.jpg',
+    photo: '/images/Grad_with_wedding_cake.jpg',
     testimonial: '"Now working as a Junior Pastry Chef at a Grand Hotel. Forever grateful for the mentorship."',
   },
   {
     id: 3,
     name: 'Graduate 3',
     year: "Class of '25",
-    photo: '/images/Grad3.jpg',
+    photo: '/images/Student_making_Cake_in_training_room.jpg',
     testimonial: '"Learned the business side of baking. I\'m now the Head of Inventory for a regional bakery chain."',
   },
 ];

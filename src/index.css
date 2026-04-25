@@ -32,7 +32,6 @@ html {
   animation: fadeIn 0.3s ease-out;
 }
 
-/* Print styles */
 @media print {
   nav, footer, .no-print { display: none !important; }
   body { font-size: 12pt; color: #000; background: #fff; }
