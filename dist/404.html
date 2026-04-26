@@ -4,15 +4,27 @@
   <meta charset="utf-8">
   <title>Hannah's Patisserie</title>
   <script>
-    // Redirect to index.html with original path for React Router
-    const path = window.location.pathname;
-    const search = window.location.search;
-    const hash = window.location.hash;
-    window.location.replace('/hannahs-patisserie/' + path + search + hash);
+    // Redirect to index.html with the original path for React Router
+    (function() {
+      const redirect = function() {
+        const base = '/hannahs-patisserie';  
+        const path = window.location.pathname.replace(base, '') || '/';
+        const search = window.location.search;
+        const hash = window.location.hash;
+        // Redirect to root index.html with path as hash 
+        window.location.replace(base + '/?' + new URLSearchParams({ path: path + search + hash }));
+      };
+      // Run redirect immediately
+      redirect();
+    })();
   </script>
+  <style>
+    body { font-family: sans-serif; text-align: center; padding: 50px; color: #333; }
+    a { color: #C8967B; }
+  </style>
 </head>
-<body style="margin:0;padding:20px;font-family:sans-serif;text-align:center">
+<body>
   <h2>🍪 Loading Hannah's Patisserie...</h2>
-  <p>If you're not redirected, <a href="/hannahs-patisserie/">click here</a>.</p>
+  <p>Redirecting to app. If this doesn't work, <a href="/hannahs-patisserie/">click here</a>.</p>
 </body>
 </html>
