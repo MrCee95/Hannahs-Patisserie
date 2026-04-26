@@ -4,26 +4,29 @@ import react from '@vitejs/plugin-react';
 export default defineConfig({
   plugins: [react()],
   
-  // 🔑 lowercase + trailing slash + matches repo name
+  
   base: '/hannahs-patisserie/',
   
   build: {
     outDir: 'dist',
-    emptyOutDir: true, // Force clean build every time
+    emptyOutDir: true, 
+    sourcemap: true,
   },
   
-  // Debug: Log config to confirm it's loaded
-  logLevel: 'info',
-  customLogger: {
-    info: (msg) => {
-      if (msg.includes('using resolved config')) {
-        console.log('✅ Vite config loaded:', msg);
-      }
-      console.log(msg);
+  server: {
+    port: 3000,
+    strictPort: false,
+    open: true,
+  },
+  
+  // Resolve aliases for cleaner imports
+  resolve: {
+    alias: {
+      '@': '/src',
+      '@components': '/src/components',
+      '@pages': '/src/pages',
+      '@hooks': '/src/hooks',
+      '@data': '/src/data',
     },
-    warn: console.warn,
-    error: console.error,
-    clear: console.clear,
-    hasErrorLogged: () => false,
   },
 });
